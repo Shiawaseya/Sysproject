@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pocket Recipe</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="first-page">
+      <header>
+        <h1>Pocket Recipe</h1>
+        <p>Delicious food for every mood</p>
+      </header>
+
+      <div class="meal">
+        <section class="meal-wrapper">
+          <div class="search-wrapper">
+            <label for="search"><h2>Search</h2></label>
+            <input id="search" type="text" />
+            <button id="open-modal-button">Add Meal</button>
+          </div>
+          <div class="item-section">
+            <div class="items-wrapper"></div>
+          </div>
+        </section>
+        <aside class="filter-wrapper">
+          <h2>Filter</h2>
+          <form id="filter-form" action="" method="post">
+            <div class="input-wrapper">
+              <label for="by-main"><h5>by main ingredient</h5></label>
+              <select name="main" id="by-main">
+                <option value="all">all</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="by-category"><h5>by Category</h5></label>
+              <select name="category" id="by-category">
+                <option value="all">all</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="by-area"><h5>by-area</h5></label>
+              <select name="area" id="by-area">
+                <option value="all">all</option>
+                <option value="luzon">luzon</option>
+                <option value="visayas">visayas</option>
+                <option value="mindanao">mindanao</option>
+              </select>
+            </div>
+
+            <div class="input-wrapper" id="radio">
+              <label for="kid"><h5>kid</h5></label>
+              <input id="kid" type="radio" value="kid" name="consumer" />
+              <label for="adult"><h5>adult</h5></label>
+              <input id="adult" type="radio" value="adult" name="consumer" />
+              <label for="adult/kid"><h5>adult/kid</h5></label>
+              <input
+                id="adultKid"
+                type="radio"
+                value="adultKid"
+                name="consumer"
+                checked
+              />
+            </div>
+
+            <input type="submit" />
+          </form>
+        </aside>
+      </div>
+    </div>
+    <div class="second-page">
+      <aside class="meal-details">
+        <div class="img-instruction-wrapper">
+          <img src="./src/img/biko.jpg" alt="" />
+          <div class="instruction">
+            <h2>Instruction</h2>
+            <ol>
+              <li>
+                <h3>1</h3>
+                <div>
+                  <h4>Lorem, ipsum dolor.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium, dolor.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h3>2</h3>
+                <div>
+                  <h4>Lorem, ipsum dolor.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium, dolor.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h3>3</h3>
+                <div>
+                  <h4>Lorem, ipsum dolor.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium, dolor.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h3>4</h3>
+                <div>
+                  <h4>Lorem, ipsum dolor.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium, dolor.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <h3>5</h3>
+                <div>
+                  <h4>Lorem, ipsum dolor.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium, dolor.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>expense</th>
+                <th colspan="9">Ingredient</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>20min</td>
+                <td>200php</td>
+                <td>itlog</td>
+                <td>talog</td>
+                <td>sibuyas</td>
+                <td>itlog</td>
+                <td>talog</td>
+                <td>sibuyas</td>
+                <td>itlog</td>
+                <td>talog</td>
+                <td>sibuyas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+      <aside class="video-instruction">
+        <div>
+          <h2>Video Instruction</h2>
+          <div class="video-container">
+            <video src="" controls></video>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div id="add-meal-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Add a New Meal</h2>
+        <form id="add-meal-form">
+          <div>
+            <label for="meal-name">Meal Name:</label>
+            <input type="text" id="meal-name" required />
+          </div>
+          <div>
+            <label for="cooking-time">Cooking Time:</label>
+            <input type="text" id="cooking-time" required />
+          </div>
+          <div>
+            <label for="expense">Expense:</label>
+            <input type="number" id="expense" required />
+          </div>
+          <div>
+            <label for="ingredients">Ingredients (comma-separated):</label>
+            <input type="text" id="ingredients" required />
+          </div>
+          <div>
+            <label for="instruction">Instruction:</label>
+            <textarea id="instruction" required></textarea>
+          </div>
+          <div>
+            <label for="category">category:</label>
+            <select name="" id="category"></select>
+          </div>
+          <div>
+            <label for="geoOption">Place</label>
+            <select name="place" id="geoOption">
+              <option value="luzon">luzon</option>
+              <option value="visayas">visayas</option>
+              <option value="mindanao">mindanao</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit">Add Meal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
